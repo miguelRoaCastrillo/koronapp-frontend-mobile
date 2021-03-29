@@ -5,7 +5,7 @@ export default GetStartedView = () => {
     return(
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>
-                Get Started
+                Explicando git flow
             </Text>
         </View>
     );
