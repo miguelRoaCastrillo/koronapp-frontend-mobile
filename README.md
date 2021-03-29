@@ -1,4 +1,4 @@
-# Koronapp Mobile
+﻿# Koronapp Mobile
 
 ## 📖 Abstract
 Proyecto para ingeniería del software II, catedra de la carrera de Ingeniería en informática en la UNEG. Este proyecto no es mas que la versión móvil de la aplicación general, que es requerimiento para aprobar el proyecto final de la asignatura.
@@ -13,6 +13,13 @@ Descripcion del stack
  - [Axios](https://github.com/axios/axios) para realizar peticiones http al backend de koronapp
  - [Jest](https://jestjs.io/docs/en/snapshot-testing) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) para realizar TDDS y Snapshot testing (estas herramientas mitigan los riesgos)
  - [Eslint](Eslint) & [Prettier](https://prettier.io/): para formateo de codigo y reducción de errores 
+
+## 🖌️Diseño
+Se manejara el mockup de las vistas para la aplicacion a traves de figma donde el equipo de diseño y desarrollo podran converger para lograr el resultado final
+
+![enter image description here](https://res.cloudinary.com/db9kkh0uw/image/upload/v1616971713/FireShot_Capture_066_-_Proyecto_Software_II_Figma_-_www.figma.com_xhx5hm.png)
+
+[Wireframes/Mockup](https://www.figma.com/file/eWhEyqP2SQ9XAgBzSwF8TH/Proyecto-Software-II?node-id=0:1) 
 
 ## 🚀 Roadmap
  
