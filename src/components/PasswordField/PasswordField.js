@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 
-export const PasswordField = () =>{
+export const PasswordField = ({...otherProps}) =>{
 
     const [encriptado, setEncriptado] = useState(true);
 
@@ -14,9 +14,13 @@ export const PasswordField = () =>{
         }
     }
 
+    const {value, placeholder} = otherProps; {/*Destructuración*/}
+
     return(
         <View style={styles.container}>
-            <TextInput                 
+            <TextInput   
+                value={value}
+                placeholder={placeholder}
                 style={styles.textInput}
                 secureTextEntry={encriptado}
             />

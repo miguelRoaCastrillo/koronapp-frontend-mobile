@@ -8,7 +8,7 @@ export default GetStartedView = () => {
             <Text>
                 Get Started                
             </Text>
-            <PasswordField/>
+            <PasswordField placeholder={'Contraseña'}/>
         </View>
     );
 }
