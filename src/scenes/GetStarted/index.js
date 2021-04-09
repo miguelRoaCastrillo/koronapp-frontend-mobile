@@ -1,8 +1,8 @@
 import React from "react";
 import GetStartedView from "./View";
 
-export default GetStartedScene = () => {
+export default GetStartedScene = ({ navigation }) => {
     return (
-        <GetStartedView/>
+        <GetStartedView navigation={ navigation }/>
     );
 }
