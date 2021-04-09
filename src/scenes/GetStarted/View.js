@@ -22,6 +22,7 @@ export default GetStartedView = () => {
             <Text>
                 La password es: {pass}
             </Text>
+            <Text>Hola git</Text>
         </View>
     );
 }
