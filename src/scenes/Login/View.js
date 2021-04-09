@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native'
+import { Colors } from '@/theme';
 
 
 export const LoginView = ({ navigation, ...otherProps }) => {
@@ -8,9 +9,9 @@ export const LoginView = ({ navigation, ...otherProps }) => {
     const [pass, setPass] = useState();
 
     return(
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: Colors.primary }}>
             <Text>
-                Hi i'm the login!
+                Ingresa
             </Text>
             <TouchableOpacity onPress={ () => navigation.navigate('SignUp') }>
                 <Text style={ styles.button }>
