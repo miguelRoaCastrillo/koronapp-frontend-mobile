@@ -1,28 +1,39 @@
-import React, { useState } from "react";
-import { View , Text } from "react-native";
-import { TextField } from "./../../components/TextField/TextField.js"
-import { PasswordField } from "./../../components/PasswordField/PasswordField.js";
+import React from "react";
+import { View , Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default GetStartedView = () => {
 
-    const [pass, setPass] = useState();
-    const [email, setEmail] = useState();
+export const GetStartedView = ({ navigation }) => {
 
     return(
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>
                 Get Started
-            </Text>
-            <TextField label={'E-Mail'} placeholder={'Ingrese su E-Mail'} onChangeText={text=>setEmail(text)} />
-            <PasswordField label={'Contraseña'} placeholder={'Ingrese la contraseña'} onChangeText={text=>setPass(text)} />            
-            <View>
-                <Text>
-                    {'El E-Mail es: ' + email}
+            </Text>         
+            <TouchableOpacity onPress={ () => navigation.navigate('Login') }>
+                <Text style={styles.button}>
+                    Go to Login
                 </Text>
-                <Text>
-                    {'La constraseña es:' + pass }
+            </TouchableOpacity>
+            <TouchableOpacity onPress={ () => navigation.navigate('SignUp') }>
+                <Text style={styles.button}>
+                    Go to SignUp
                 </Text>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 }
+
+export const styles = StyleSheet.create({
+    button:{
+        marginTop: 10,
+        marginBottom: 10,
+        padding: 20,
+        backgroundColor: '#3CDDDF',
+        color: 'white',
+        borderRadius: 10,
+        fontWeight: 'bold',
+        fontSize: 20
+    }
+})
+
+export default GetStartedView;
