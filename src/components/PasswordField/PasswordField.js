@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 
-export const PasswordField = ({...otherProps}) =>{
+export const PasswordField = ({...otherProps}) => {
 
     const [encriptado, setEncriptado] = useState(true);
 
@@ -14,27 +14,36 @@ export const PasswordField = ({...otherProps}) =>{
         }
     }
 
-    const {value, placeholder} = otherProps; {/*Destructuración*/}
+    const {value, placeholder, label, onChangeText} = otherProps; 
 
     return(
-        <View style={styles.container}>
-            <TextInput   
-                value={value}
-                placeholder={placeholder}
-                style={styles.textInput}
-                secureTextEntry={encriptado}
-            />
-            <TouchableOpacity onPress={onIconPress} style={styles.eye}>
-                <Icon name="eye" size={20} />            
-            </TouchableOpacity>            
-        </View>
-    )
+        <View style = { styles.container }>
+            <Text style = { styles.label }>
+                { label }
+            </Text>
+            <View style={styles.containerInput}>
+                <TextInput   
+                    value={value}
+                    placeholder={placeholder}
+                    style={styles.textInput}
+                    secureTextEntry={encriptado}
+                    onChangeText = { onChangeText }
+                />
+                <TouchableOpacity onPress={onIconPress} style={styles.eye}>
+                    <Icon name="eye" size={20} />            
+                </TouchableOpacity>            
+            </View>
+        </View>        
+    );
 }
 
 const styles = StyleSheet.create({
     container:{
-        marginTop: 20,
-        marginBottom: 20,        
+        marginTop: 10,
+        marginBottom: 10
+    },
+    containerInput:{
+        marginTop: 5,        
         flexDirection: "row",
         width: 320,
         height: 60, 
@@ -49,6 +58,10 @@ const styles = StyleSheet.create({
     },
     textInput:{
         flex: 1
+    },
+    label:{
+        color: '#3A3A3A',
+        textAlign: 'left'
     }
 });
 
