@@ -11,12 +11,16 @@ const AuthNavigatorConfig = {
 const AuthStack = createStackNavigator();
 
 const GetStartedScene = lazy( () => import("@/scenes/GetStarted") );
+const LoginScene      = lazy( () => import("@/scenes/Login") );
+const SignUpScene     = lazy( () => import("@/scenes/SignUp") );
 
 const AuthNavigator = () => {
     return(
-        <Suspense fallback={SplashScreen}>
+        <Suspense fallback={SplashScreen}>            
             <AuthStack.Navigator {...AuthNavigatorConfig}>
                 <AuthStack.Screen name="GetStarted" component={GetStartedScene} />
+                <AuthStack.Screen name="Login" component={ LoginScene } />
+                <AuthStack.Screen name="SignUp" component={ SignUpScene } />                
             </AuthStack.Navigator>
         </Suspense>
     )
